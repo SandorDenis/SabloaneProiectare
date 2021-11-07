@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Book extends Section{
 
     private String name;
     private List<Author> authors = new ArrayList<>();
-    private TableOfContents tableOfContents;
-    private List<Chapter> chapters = new ArrayList<>();
 
     public Book() {
     }
@@ -19,14 +17,17 @@ public class Book {
         this.authors.add(author);
     }
 
-    public int createChapter(String s) {
-        Chapter chapter = new Chapter(s);
-        chapters.add(chapter);
-        return chapters.indexOf(chapter);
-    }
-
-    public Chapter getChapter(int indexChapterOne) {
-        return this.chapters.get(indexChapterOne);
+    public void addContent(Element element) {
+        if (element instanceof Section)
+            elements.add(element);
+        if (element instanceof TableOfContents)
+            elements.add(element);
+        if (element instanceof Paragraph)
+            elements.add(element);
+        if (element instanceof Image)
+            elements.add(element);
+        if (element instanceof Table)
+            elements.add(element);
     }
 
     @Override
@@ -37,6 +38,10 @@ public class Book {
     }
 
     public void print() {
-        System.out.print("Book: "  + name);
+        System.out.print("Book: "  + name + '\n' +
+                "Authors: " + '\n');
+        authors.forEach(System.out::println);
+        super.print();
     }
+
 }

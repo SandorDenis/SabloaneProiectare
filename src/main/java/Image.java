@@ -1,18 +1,34 @@
 public class Image implements Element{
 
-    String imageName;
+    String url;
 
     public Image(String imageName) {
-        this.imageName = imageName;
+        this.url = imageName;
     }
 
     @Override
     public String toString() {
-        return imageName;
+        return url;
     }
 
     @Override
     public void print() {
-        System.out.print(imageName);
+        System.out.print(url);
     }
+
+    @Override
+    public void add(Element element) {
+        section.add(element);
+    }
+
+    @Override
+    public void remove(Element element) {
+        section.remove(element);
+    }
+
+    @Override
+    public Element get(int position) {
+        return Section.elements.get(position);
+    }
+
 }
