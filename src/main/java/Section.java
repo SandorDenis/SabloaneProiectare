@@ -13,28 +13,12 @@ public class Section implements Element{
     }
 
     @Override
-    public String toString() {
-        return title;
-    }
-
-    @Override
     public void print() {
-        for(Element element: elements) {
-            if(element instanceof Section)
-                System.out.println(element);
-            if(element instanceof TableOfContents)
-                System.out.println("Table of contents: " + element);
-            if(element instanceof Paragraph)
-                System.out.println("Paragraph: " + element);
-            if(element instanceof Image)
-                System.out.println("Image: " + element);
-            if(element instanceof Table)
-                System.out.println("Table: " + element);
-        }
+        System.out.println("Section: " + title);
     }
 
     @Override
-    public void add(Element element) {
+    public void add(Element element){
         elements.add(element);
     }
 

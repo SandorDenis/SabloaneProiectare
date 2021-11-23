@@ -18,30 +18,15 @@ public class Book extends Section{
     }
 
     public void addContent(Element element) {
-        if (element instanceof Section)
             elements.add(element);
-        if (element instanceof TableOfContents)
-            elements.add(element);
-        if (element instanceof Paragraph)
-            elements.add(element);
-        if (element instanceof Image)
-            elements.add(element);
-        if (element instanceof Table)
-            elements.add(element);
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                '}';
     }
 
     public void print() {
         System.out.print("Book: "  + name + '\n' +
                 "Authors: " + '\n');
-        authors.forEach(System.out::println);
-        super.print();
+        authors.forEach(Author::print);
+        for(Element element: elements)
+            element.print();
     }
 
 }

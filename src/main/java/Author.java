@@ -19,12 +19,7 @@ public class Author {
         this.surname = surname;
     }
 
-    @Override
-    public String toString() {
-        return "Author: " + name;
-    }
-
     public void print(){
-        System.out.print("Author: " + name);
+        System.out.println("Author: " + name);
     }
 }

@@ -1,29 +1,39 @@
-public class Image implements Element, Picture {
+public class ImageProxy implements Element, Picture{
+
+    private static Image realImage;
 
     String url;
+    Dimension dim;
 
-    public Image(String imageName) {
-        this.url = imageName;
+    public ImageProxy(String url) {
+        this.url = url;
+    }
+
+    Image loadImage(){
+        if(realImage == null) {
+            realImage = new Image(url);
+        }
+        return realImage;
     }
 
     @Override
     public void print() {
-        System.out.println("Image: " + url);
+
     }
 
     @Override
     public void add(Element element) {
-        section.add(element);
+
     }
 
     @Override
     public void remove(Element element) {
-        section.remove(element);
+
     }
 
     @Override
     public Element get(int position) {
-        return Section.elements.get(position);
+        return null;
     }
 
     @Override

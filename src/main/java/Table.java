@@ -7,13 +7,8 @@ public class Table implements Element{
     }
 
     @Override
-    public String toString() {
-        return title;
-    }
-
-    @Override
     public void print() {
-        System.out.print(title);
+        System.out.println("Title: "+title);
     }
 
     @Override

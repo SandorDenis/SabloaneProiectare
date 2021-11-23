@@ -7,13 +7,8 @@ public class Paragraph implements Element{
     }
 
     @Override
-    public String toString() {
-        return text;
-    }
-
-    @Override
     public void print() {
-        System.out.print(text);
+        System.out.println("Paragraph: " + text);
     }
 
     @Override
@@ -30,6 +25,5 @@ public class Paragraph implements Element{
     public Element get(int position) {
         return Section.elements.get(position);
     }
-
 
 }

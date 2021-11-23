@@ -10,11 +10,6 @@ public class TableOfContents implements Element{
     }
 
     @Override
-    public String toString() {
-        return "Table of contents: " + contents;
-    }
-
-    @Override
     public void print() {
         System.out.println("Table of contents: " + contents);
     }
