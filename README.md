@@ -1,3 +1,8 @@
+# Feedback lab4:
+I am not sure I implemented the Proxy design pattern correctly, could you please take a look?
+
+
+
 # Feedback lab2 and lab3:
 https://github.com/SandorDenis/SabloaneProiectare/tree/4730e556bd8ed3baa14115716de41d8833340f26
 
