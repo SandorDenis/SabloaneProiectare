@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Section implements Element{
-    String title;
+    private String title;
     static List<Element> elements = new ArrayList<>();
 
     public Section() {
@@ -14,7 +14,12 @@ public class Section implements Element{
 
     @Override
     public void print() {
-        System.out.println("Section: " + title);
+        for(Element element: elements) {
+            if (element instanceof Section)
+                System.out.println("Section: " + title);
+            if (element instanceof Paragraph)
+                element.print();
+        }
     }
 
     @Override
@@ -31,6 +36,5 @@ public class Section implements Element{
     public Element get(int position) {
         return elements.get(position);
     }
-
 
 }

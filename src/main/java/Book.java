@@ -21,7 +21,7 @@ public class Book extends Section{
             elements.add(element);
     }
 
-    public void print() {
+    public  void print() {
         System.out.print("Book: "  + name + '\n' +
                 "Authors: " + '\n');
         authors.forEach(Author::print);

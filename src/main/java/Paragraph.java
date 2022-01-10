@@ -1,6 +1,6 @@
 public class Paragraph implements Element{
 
-    String text;
+    private String text;
 
     public Paragraph(String text) {
         this.text = text;
@@ -24,6 +24,10 @@ public class Paragraph implements Element{
     @Override
     public Element get(int position) {
         return Section.elements.get(position);
+    }
+
+    void setAlignStrategy(AlignStrategy alignStrategy){
+        this.text = alignStrategy.render(text, new Context(alignStrategy));
     }
 
 }

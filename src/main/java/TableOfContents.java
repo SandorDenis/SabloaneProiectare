@@ -16,12 +16,12 @@ public class TableOfContents implements Element{
 
     @Override
     public void add(Element element) {
-        section.add(element);
+        Section.elements.add(element);
     }
 
     @Override
     public void remove(Element element) {
-        section.remove(element);
+        Section.elements.remove(element);
     }
 
     @Override
