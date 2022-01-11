@@ -20,3 +20,10 @@ for(Element element: elements) {
 # Feedback lab4:
 
 all good
+
+# Feedback lab5+6:
+https://github.com/SandorDenis/SabloaneProiectare/tree/a74711990b575b192d195e62f34771ace25d6644
+
+visitor pattern not implemented, only prototypes
+
+# Proposed grade: 9
