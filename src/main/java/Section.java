@@ -33,6 +33,11 @@ public class Section implements Element{
     }
 
     @Override
+    public void accept(Visitor visitor) {
+
+    }
+
+    @Override
     public Element get(int position) {
         return elements.get(position);
     }

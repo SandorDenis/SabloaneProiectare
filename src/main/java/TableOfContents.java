@@ -25,6 +25,11 @@ public class TableOfContents implements Element{
     }
 
     @Override
+    public void accept(Visitor visitor) {
+
+    }
+
+    @Override
     public Element get(int position) {
         return Section.elements.get(position);
     }
